@@ -1,0 +1,19 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Jenkins pipeline started'
+                sh 'ls -l'
+            }
+        }
+
+        stage('Check HTML') {
+            steps {
+                sh 'cat index.html'
+            }
+        }
+    }
+}
